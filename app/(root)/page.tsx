@@ -1,44 +1,53 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-// Icons
-import {
-  AiOutlineInstagram,
-  AiOutlineTwitter,
-  AiFillLinkedin,
-} from "react-icons/ai";
+import Link from "next/link";
+import Image from "next/image";
+
+import { motion } from "framer-motion";
+
+// Components
+import { Nav } from "../components/Nav";
+import { Hero } from "../components/Hero";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-hero bg-cover bg-no-repeat bg-center w-full ">
-      <div className="relative">
-        <div className="main-container">
-          <Image src="/logo.png" alt="Logo" width={130} height={130} />
-          <h2 className="mt-5 text-gray-1  font-bold text-[0.7rem] uppercase tracking-[.20rem] md:tracking-[.30rem]">
-            Estamos preparando motores
-          </h2>
-          <h1 className="text-white mt-3 text-md md:text-2xl lg:text-[1.3rem] font-bold uppercase tracking-[.2rem]  md:tracking-[.4rem] text-center">
-            Pronto descubrirás un nuevo universo digital!
-          </h1>
-          <div className="bg-transparent border border-gray-400/80 w-64 h-4 mt-12 rounded-full">
-            <div className="w-44 bg-gradient-to-r from-[#E4732C] to-[#1FBDB5] rounded-full h4 text-center text-xs text-transparent ml-[-2px] mt-[-1px]">
-              .
-            </div>
-          </div>
-          <p className="mt-1 text-white text-sm font-semibold">65 %</p>
-        </div>
-        <div className="font-primary absolute bottom-5 w-full flex justify-center items-center flex-col text-white gap-5">
-          <div className="flex gap-4 text-2xl ">
-            <Link
-              href={"https://www.instagram.com/skylinetech.soft/?hl=es-la"}
-              target="_blank"
-            >
-              <AiOutlineInstagram className="hover:text-primary-orange cursor-pointer" />
-            </Link>
-            <AiOutlineTwitter className="hover:text-primary-orange  cursor-pointer" />
-            <AiFillLinkedin className="hover:text-primary-orange cursor-pointer" />
-          </div>
-        </div>
+    <div className="relative h-screen bg-home bg-no-repeat bg-center bg-fixed bg-cover overflow-x-hidden overflow-y-hidden">
+      <div className="absolute z-20 top-0 px-7 pt-7 lg:px-12 lg:pt-8 flex justify-between items-center w-full h-[90px]">
+        {/* Image */}
+        <motion.div
+          initial={{
+            x: -500,
+            opacity: 0.5,
+            scaleX: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scaleX: 1,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="my-0"
+        >
+          <Link href="/">
+            <Image
+              src={"/logo.png"}
+              alt="Logo Skyline"
+              height={50}
+              width={200}
+              layout="responsive"
+              className="object-cover"
+            />
+          </Link>
+        </motion.div>
+        {/* Nav  */}
+        <Nav />
+        {/* Nav Mobile */}
+      </div>
+      <div className="h-full container mx-auto w-full">
+        {/* Hero */}
+        <Hero />
       </div>
     </div>
   );

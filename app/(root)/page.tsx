@@ -13,12 +13,19 @@ export default function Home() {
     <div className="h-screen bg-hero bg-cover bg-no-repeat bg-center w-full ">
       <div className="relative">
         <div className="main-container">
-          <Image src="/logo.png" alt="Logo" width={130} height={130} />
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={130}
+            height={130}
+            layout="responsive"
+            priority={true}
+          />
           <h2 className="mt-5 text-gray-1  font-bold text-[0.7rem] uppercase tracking-[.20rem] md:tracking-[.30rem]">
             Estamos preparando motores
           </h2>
           <h1 className="text-white mt-3 text-md md:text-2xl lg:text-[1.3rem] font-bold uppercase tracking-[.2rem]  md:tracking-[.4rem] text-center">
-            Pronto descubrirás un nuevo universo digital
+            Pronto descubrirás un nuevo universo digital!
           </h1>
           <div className="bg-transparent border border-gray-400/80 w-64 h-4 mt-12 rounded-full">
             <div className="w-44 bg-gradient-to-r from-[#E4732C] to-[#1FBDB5] rounded-full h4 text-center text-xs text-transparent ml-[-2px] mt-[-1px]">

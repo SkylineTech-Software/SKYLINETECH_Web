@@ -13,14 +13,7 @@ export default function Home() {
     <div className="h-screen bg-hero bg-cover bg-no-repeat bg-center w-full ">
       <div className="relative">
         <div className="main-container">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={130}
-            height={130}
-            layout="responsive"
-            priority={true}
-          />
+          <Image src="/logo.png" alt="Logo" width={130} height={130} />
           <h2 className="mt-5 text-gray-1  font-bold text-[0.7rem] uppercase tracking-[.20rem] md:tracking-[.30rem]">
             Estamos preparando motores
           </h2>

@@ -1,0 +1,35 @@
+.productSlider .swiper-pagination-bullets {
+  bottom: -1rem;
+}
+
+.productSlider .swiper-pagination-bullet {
+  background: #737373;
+}
+
+.productSlider .swiper-button-prev::after {
+  font-size: 2rem;
+}
+
+.productSlider .swiper-button-prev::after,
+.productSlider .swiper-button-next::after {
+  font-size: 1.3rem;
+  color: #737373;
+  padding: 2rem;
+  width: 200px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .productSlider .swiper-button-prev::after,
+  .productSlider .swiper-button-next::after {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100px;
+  }
+}
+
+@media (max-width: 425px) {
+  .productSlider .swiper-pagination-bullets {
+    bottom: 0;
+  }
+}

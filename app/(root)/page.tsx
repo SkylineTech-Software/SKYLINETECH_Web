@@ -45,7 +45,7 @@ export default function Home() {
         <Nav />
         {/* Nav Mobile */}
       </div>
-      <div className="h-full container mx-auto w-full">
+      <div className="h-full container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-0">
         {/* Hero */}
         <Hero />
       </div>

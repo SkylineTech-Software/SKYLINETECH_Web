@@ -47,7 +47,7 @@ const Page = () => {
         {/* Nav Mobile */}
       </div>
       <div className="h-full container mx-auto w-full flex justify-center items-center flex-col">
-        <h1 className="text-primary-white uppercase font-bold text-xl lg:text-6xl">
+        <h1 className="text-primary-white uppercase font-bold text-xl lg:text-[56px]">
           SOBRE NOSOTROS <span>POR QUE ELEGIRNOS?</span>
         </h1>
         <div className="flex justify-between w-full gap-36">
